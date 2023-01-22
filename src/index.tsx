@@ -1,13 +1,13 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import {App} from "./App/App";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { App } from './App/App';
 
 
-const container = document.querySelector(`#app`)!;
-const root = createRoot(container);
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const root = createRoot(document.querySelector('#app')!);
 
 root.render(
 	<React.StrictMode>
 			<App />
-	</React.StrictMode>
+	</React.StrictMode>,
 );
