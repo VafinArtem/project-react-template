@@ -1,0 +1,19 @@
+{
+  "name": "project-react-template",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VafinArtem/project-react-template.git"
+  },
+  "author": "Artem Vafin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VafinArtem/project-react-template/issues"
+  },
+  "homepage": "https://github.com/VafinArtem/project-react-template#readme"
+}
