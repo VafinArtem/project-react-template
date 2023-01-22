@@ -1,0 +1,9 @@
+{
+  "customSyntax": "postcss-scss",
+  "plugins": ["stylelint-order", "stylelint-scss"],
+  "extends": ["stylelint-order-htmlacademy"],
+  "rules": {
+    "length-zero-no-unit": true,
+    "no-empty-source": null
+  }
+}
