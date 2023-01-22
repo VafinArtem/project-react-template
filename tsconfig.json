@@ -8,7 +8,15 @@
     "jsx": "react",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customTemplate": "./customTemplate.js"
+        }
+      }
+    ]
   },
   "exclude": [
     "node_modules"
