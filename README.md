@@ -8,3 +8,4 @@
 6. SASS
 7. StoryBook
 8. FSD
+9. Jest
