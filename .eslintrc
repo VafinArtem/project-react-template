@@ -1,0 +1,42 @@
+{
+  "env": {
+    "es2020": true,
+    "browser": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "react",
+    "optimize-regex",
+    "promise"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "airbnb-typescript",
+    "plugin:import/typescript"
+  ],
+  "rules": {
+    "arrow-parens": "off",
+    "no-alert": "error",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "linebreak-style": 0,
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-console": "off",
+    "react/prop-types": "off",
+    "implicit-arrow-linebreak": ["error", "below"],
+    "no-param-reassign": "off"
+  },
+  "settings": {
+    "import/extensions": [".ts", ".tsx", ".json"]
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}
