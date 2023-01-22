@@ -1,0 +1,37 @@
+@import 'vars';
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.2;
+	font-family: $main-font;
+	color: #14233D;
+}
+
+a {
+	text-decoration: none;
+}
+
+#app {
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	height: 100%;
+}
+
+.container {
+	max-width: $container-max-width;
+	margin: 0 auto;
+}
