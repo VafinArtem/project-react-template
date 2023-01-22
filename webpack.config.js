@@ -60,6 +60,35 @@ module.exports = {
 				include: sassModuleRegex
 			},
 			{
+				test: sassRegex,
+				use: [
+					"style-loader",
+					{
+						loader: "css-loader",
+						options: {
+							importLoaders: 1
+						}
+					},
+					{
+						loader: "postcss-loader",
+						options: {
+							postcssOptions: {
+								plugins: [
+									[
+										"postcss-preset-env",
+										"autoprefixer",
+									],
+								],
+							},
+						},
+					},
+					{
+						loader: "sass-loader"
+					}
+				],
+				exclude: sassModuleRegex
+			},
+			{
 				test: cssRegex,
 				use: [
 					"style-loader",
@@ -92,6 +121,29 @@ module.exports = {
 				],
 				include: cssModuleRegex
 			},
+			{
+				test: cssRegex,
+				use: [
+					"style-loader",
+					{
+						loader: "css-loader"
+					},
+					{
+						loader: "postcss-loader",
+						options: {
+							postcssOptions: {
+								plugins: [
+									[
+										"postcss-preset-env",
+										"autoprefixer",
+									],
+								],
+							},
+						},
+					}
+				],
+				exclude: cssModuleRegex
+			}
 		],
 	},
 	resolve: {
