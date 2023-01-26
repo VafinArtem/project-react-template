@@ -1,7 +1,9 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const svgLoader = require("./wp-config/svg-loader");
 const tsLoader = require("./wp-config/ts-loader");
 const styleLoader = require("./wp-config/style-loader");
+const fontsLoader = require("./wp-config/fonts-loader");
 
 module.exports = {
 	mode: 'development',
@@ -12,6 +14,7 @@ module.exports = {
 			directory: path.join(__dirname, 'dist'),
 		},
 	},
+	plugins: [new HtmlWebpackPlugin({template: './public/index.html'})],
 	module: {
 		strictExportPresence: true,
 		rules: [
@@ -20,7 +23,8 @@ module.exports = {
 			styleLoader.sassModules,
 			styleLoader.sassDefault,
 			styleLoader.cssModules,
-			styleLoader.cssDefault
+			styleLoader.cssDefault,
+			fontsLoader
 		],
 	},
 	resolve: {
@@ -36,7 +40,8 @@ module.exports = {
 		}
 	},
 	output: {
-		filename: 'bundle.js',
+		filename: 'bundle.[contenthash].js',
 		path: path.resolve(__dirname, 'dist'),
+		clean: true,
 	},
 };
